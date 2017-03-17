@@ -12,12 +12,11 @@ env:
     XPCSHELL=/tmp/mozilla/firefox/xpcshell
 
 before_script:
+  - export ORIGINAL_DIR=$PWD
   - mkdir /tmp/mozilla && cd /tmp/mozilla
   - wget https://archive.mozilla.org/pub/firefox/nightly/latest-mozilla-central/firefox-55.0a1.en-US.linux-x86_64.tar.bz2
   - tar xf firefox-55.0a1.en-US.linux-x86_64.tar.bz2
   - wget https://archive.mozilla.org/pub/firefox/nightly/latest-mozilla-central/firefox-55.0a1.en-US.linux-x86_64.common.tests.zip
   - unzip -qq firefox-55.0a1.en-US.linux-x86_64.common.tests.zip
   - cp bin/xpcshell firefox/xpcshell
-script:
-  - npm install
-  - npm test
+  - cd $ORIGINAL_DIR
