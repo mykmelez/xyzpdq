@@ -1,0 +1,18 @@
+dist: trusty
+language: node_js
+node_js: "7"
+os: linux
+sudo: false
+
+env:
+  global:
+    LD_LIBRARY_PATH=$TRAVIS_BUILD_DIR/dist/firefox
+    XPCSHELL=$TRAVIS_BUILD_DIR/dist/firefox/xpcshell
+
+before_script:
+  - mkdir dist
+  - cd dist && wget https://archive.mozilla.org/pub/firefox/nightly/latest-mozilla-central/firefox-55.0a1.en-US.linux-x86_64.tar.bz2
+  - cd dist && tar xf firefox-55.0a1.en-US.linux-x86_64.tar.bz2
+  - cd dist && wget https://archive.mozilla.org/pub/firefox/nightly/latest-mozilla-central/firefox-55.0a1.en-US.linux-x86_64.common.tests.zip
+  - cd dist && unzip firefox-55.0a1.en-US.linux-x86_64.common.tests.zip
+  - cp dist/bin/xpcshell dist/firefox/xpcshell
