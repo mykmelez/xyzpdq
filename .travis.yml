@@ -1,7 +1,9 @@
 dist: trusty
 language: node_js
-node_js: "7"
-os: linux
+node_js:
+  - "7"
+os:
+  - linux
 sudo: false
 
 env:
