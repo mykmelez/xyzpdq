@@ -4,7 +4,7 @@
   "description": "'Xamine your 'Zilla! Pretty damn quick?",
   "main": "main.js",
   "scripts": {
-    "test": "test.js"
+    "test": "node ./test.js"
   },
   "author": "Myk Melez <myk@mykzilla.org>",
   "license": "Apache-2.0",
