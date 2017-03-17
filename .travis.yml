@@ -16,5 +16,5 @@ before_script:
   - wget https://archive.mozilla.org/pub/firefox/nightly/latest-mozilla-central/firefox-55.0a1.en-US.linux-x86_64.tar.bz2
   - tar xf firefox-55.0a1.en-US.linux-x86_64.tar.bz2
   - wget https://archive.mozilla.org/pub/firefox/nightly/latest-mozilla-central/firefox-55.0a1.en-US.linux-x86_64.common.tests.zip
-  - unzip --quiet firefox-55.0a1.en-US.linux-x86_64.common.tests.zip
+  - unzip -qq firefox-55.0a1.en-US.linux-x86_64.common.tests.zip
   - cp bin/xpcshell firefox/xpcshell
